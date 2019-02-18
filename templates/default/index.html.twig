@@ -1,0 +1,24 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Profile page!{% endblock %}
+    {% block page_title %}<div class="pt-5">Hello: {{ app.user.firstname }}! </div>{% endblock %}
+{% block body %}
+    <div class="row mb-5 mt-5">
+        <div class="col-sm-6 offset-sm-3">            
+            <table class="table">
+                <tr>
+                    <th>First name</th><td>:</td><td>{{app.user.firstname}}</td>
+                </tr>
+                <tr>
+                    <th>Last name</th><td>:</td><td>{{app.user.lastname}}</td>
+                </tr>
+                <tr>
+                    <th>Username</th><td>:</td><td>{{app.user.username}}</td>
+                </tr>
+            </table>
+            <div class="text-center">    
+            <a href="{{ profile_url }}" class="btn btn-primary btn-big">Edit Profile</a>
+            </div>
+        </div>
+    </div>
+{% endblock %}

@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>{% block title %}Welcome!{% endblock %}</title>
+        {% block stylesheets %}{% endblock %}
+        <link type="text/css" rel="stylesheet" href="{{ asset("assets/css/main.css") }}" />
+    </head>
+    <body>
+        {{ include("common/topnav.html.twig") }}
+        <div class="container">
+            <div class="row">
+                <div class="col-sm-12">
+                    <h1 class="text-center">{% block page_title %}{% endblock %}</h1>                    
+                </div>
+             </div>            
+            {% block body %}{% endblock %}
+        </div>
+        {% block javascripts %}{% endblock %}
+    {{ include("common/footer.html.twig") }}
