@@ -20,3 +20,12 @@ go to /config/packages/security.yaml and uncomment the following:
     please use the similar configurations for your own routes
 
 
+
+Importing Users Via CSV:
+PHP bin/console app:csv_importusers "<file path >"
+    
+    For example, place the file (csv_users.csv) in the csvuploads folder in the root directory.
+    run the command as PHP bin/console app:csv_importusers "./csvuploads/csv_users.csv"
+    
+    
+
